@@ -1,0 +1,20 @@
+MINHA ROTINA V7 - PROJETO APK ANDROID OFFLINE
+
+Este ZIP contém o código-fonte do aplicativo Android, NÃO um APK pronto.
+
+Para compilar sem Android Studio:
+1. Crie um repositório NOVO no GitHub (por exemplo Minha-Rotina-Android).
+2. Envie o CONTEÚDO deste ZIP preservando as pastas (incluindo .github/workflows).
+3. No repositório, abra Actions > Gerar APK Minha Rotina > Run workflow.
+4. Ao terminar, baixe o artifact Minha-Rotina-v7-APK e extraia app-debug.apk.
+5. Instale o APK no Android permitindo a instalação da fonte escolhida.
+
+Para enviar as pastas mantendo a estrutura, use GitHub Desktop, Git, Codespaces ou Android Studio. Subir o ZIP como arquivo único NÃO compila.
+
+IMPORTANTE:
+- A interface e os dados ficam locais no WebView do APK, sem precisar de internet.
+- Não há notificações nativas agendadas com app fechado, vibração nem alarmes Android nesta versão.
+- O microfone/voz pode não funcionar nesta versão offline.
+- Os dados do Chrome/GitHub Pages NÃO migram automaticamente para o APK. Faça backup no site antes e importe no APK.
+- Não desinstale sem exportar backup: os dados locais podem ser apagados.
+- O APK debug não é assinado com uma chave de publicação permanente. Guarde os dados antes de instalar uma versão compilada em outro ambiente.
