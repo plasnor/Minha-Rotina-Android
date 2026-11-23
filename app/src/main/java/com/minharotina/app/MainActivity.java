@@ -1,3 +1,4 @@
+
 package com.minharotina.app;
 
 import android.app.Activity;
@@ -5,9 +6,6 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.WebSettings;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebResourceResponse;
-import android.webkit.WebViewAssetLoader;
 
 public class MainActivity extends Activity {
 
@@ -22,33 +20,13 @@ public class MainActivity extends Activity {
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
-        settings.setAllowFileAccess(false);
-        settings.setAllowContentAccess(false);
 
-        WebViewAssetLoader assetLoader =
-            new WebViewAssetLoader.Builder()
-                .addPathHandler(
-                    "/assets/",
-                    new WebViewAssetLoader.AssetsPathHandler(this)
-                )
-                .build();
-
-        webView.setWebViewClient(new WebViewClient() {
-            @Override
-            public WebResourceResponse shouldInterceptRequest(
-                WebView view,
-                WebResourceRequest request
-            ) {
-                return assetLoader.shouldInterceptRequest(
-                    request.getUrl()
-                );
-            }
-        });
+        webView.setWebViewClient(new WebViewClient());
 
         setContentView(webView);
 
         webView.loadUrl(
-            "https://appassets.androidplatform.net/assets/index.html"
+            "https://plasnor.github.io/Minha-Rotina/"
         );
     }
 
